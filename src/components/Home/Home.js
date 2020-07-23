@@ -27,15 +27,15 @@ class Home extends Component {
   }
 
   getRandomPhoto () {
-    // unsplash.photos.getRandomPhoto()
-    //   .then(data => {
-    //     return data.json()
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //     this.setState({ randomPhoto: data.urls.full })
-    //   })
-    this.setState({ randomPhoto: 'https://images.unsplash.com/photo-1593642703055-4b72c180d9b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MDMxM30' })
+    unsplash.photos.getRandomPhoto()
+      .then(data => {
+        return data.json()
+      })
+      .then(data => {
+        console.log(data)
+        this.setState({ randomPhoto: data.urls.full })
+      })
+    // this.setState({ randomPhoto: 'https://images.unsplash.com/photo-1593642703055-4b72c180d9b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE1MDMxM30' })
   }
 
   handleLoadMore () {
